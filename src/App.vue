@@ -41,6 +41,10 @@ function generatePassword() {
   console.log(passwordStrength(state.password).value)
 }
 
+function passwordColor() {
+
+}
+
 state.difficulty = passwordStrength(state.password).value
 
 
@@ -92,13 +96,13 @@ state.difficulty = passwordStrength(state.password).value
       <div class="text-primary">STRENGTH</div>
       <div class="text-secondary flex flex-row items-center">
         <p class="mr-3 ">{{ passwordStrength(state.password).value }}</p>
-        <div class="h-[30px] w-[13px] border-primary border-[3px] mr-[5px]"></div>
+        <div class="h-[30px] w-[13px] border-primary border-[3px] mr-[5px] bg-terceary "></div>
         <div class="h-[30px] w-[13px] border-primary border-[3px] mr-[5px]"></div>
         <div class="h-[30px] w-[13px] border-primary border-[3px] mr-[5px]"></div>
         <div class="h-[30px] w-[13px] border-primary border-[3px] mr-[5px]"></div>
       </div>
     </div>
-    <button v-on:click="generatePassword" class="text-white">
+    <button v-on:click="generatePassword, passwordColor" class="text-white">
       <p>Gerate</p>
     </button>
   </section>
